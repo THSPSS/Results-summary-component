@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Results summary component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body class="body">
+    <div class="container">
+      <div class="score-container">
+        <p class="score-text">Your Result</p>
+        <div class="circle">
+          <h1 class="score-title">76</h1>
+          <p class="score-text">of 100</p>
+        </div>
+        <p class="score-sidetext">Great</p>
+        <p class="score-text">
+          You scored higher than 65% of <br class="xl" />the <br class="sm" />
+          people who have taken<br class="xl" />
+          these tests.
+        </p>
+      </div>
+      <div class="summary-container">
+        <h2 class="h2 summary-title">Summary</h2>
+        <div class="summary-box reaction" id="Reaction">
+          <img src="./assets/images/icon-reaction.svg" alt="icon-reactionSVG" />
+          <p class="summary reaction-title title"></p>
+          <div class="summary point-box">
+            <span class="summary point"></span>
+            <span class="summary-total"> / 100 </span>
+          </div>
+        </div>
+        <div class="summary-box memory" id="Memory">
+          <img src="./assets/images/icon-memory.svg" alt="icon-memorySVG" />
+          <p class="summary memory-title title"></p>
+          <div class="summary point-box">
+            <span class="summary point"></span>
+            <span class="summary-total"> / 100 </span>
+          </div>
+        </div>
+        <div class="summary-box verbal" id="Verbal">
+          <img src="./assets/images/icon-verbal.svg" alt="icon-verbalSVG" />
+          <p class="summary verbal-title title"></p>
+          <div class="summary point-box">
+            <span class="summary point"></span>
+            <span class="summary-total"> / 100 </span>
+          </div>
+        </div>
+        <div class="summary-box visual" id="Visual">
+          <img src="./assets/images/icon-visual.svg" alt="icon-visualSVG" />
+          <p class="summary verbal-title title"></p>
+          <div class="summary point-box">
+            <span class="summary point"></span>
+            <span class="summary-total"> / 100 </span>
+          </div>
+        </div>
+        <a href="/" class="btn">Continue</a>
+      </div>
+
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">THSPSS</a>.
+      </div>
+    </div>
+
+    <!--script file-->
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>

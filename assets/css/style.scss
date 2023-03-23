@@ -1,0 +1,276 @@
+
+
+@font-face {
+    font-family: 'HankenGrotesk';
+    src: URL('/assets/fonts/HankenGrotesk-VariableFont_wght.ttf') format('truetype');
+  }
+
+/*-------------root-------------*/
+:root {
+    /*Primary*/
+    --Light-red: hsl(0, 100%, 67%);
+    --Orangey-yellow: hsl(39, 100%, 56%);
+    --Green-teal: hsl(166, 100%, 37%);
+    --Cobalt-blue: hsl(234, 85%, 45%);
+
+    /*Gradients*/
+    --Light-slate-blue: hsl(252, 100%, 67%);
+    --Light-royal-blue: hsl(241, 81%, 54%);
+
+    --Violet-blue: hsla(256, 72%, 46%, 1);
+    --Persian-blue: hsla(241, 72%, 46%, 0);
+
+    /*Neutral*/
+    --White: hsl(0, 0%, 100%);
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark-gray-blue: hsl(224, 30%, 27%);
+
+    /* font-weight */
+    --fw-5:500;
+    --fw-7:700;
+    --fw-8:800;
+}
+
+/*-------------root end----------*/
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 375px;
+
+// Large tablets and desktops
+//$screen-xl-min: 1440px;
+$screen-xl-min: 1024px;
+
+// Large devices
+@mixin lg {
+    @media (min-width: #{$screen-xl-min}) {
+        @content;
+    }
+ }
+
+
+ * {
+    margin:0;
+    padding:0;
+    font-family: 'HankenGrotesk';
+    
+    a { 
+        color: inherit;
+        text-decoration: none;
+        display: block;
+    }
+ }
+
+
+
+ 
+ .body {
+    height: 100vh;
+    position: relative;
+    .attribution {
+        a {display: inline-block;};
+        margin: 70px auto ;
+
+        @include lg {
+            position: fixed;
+            bottom: 20px;
+        }
+    }
+
+    @include lg {
+        // Styles for large devices
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .container {
+        
+
+        @include lg {
+            // Styles for large devices
+            display: flex;
+            justify-content: center;
+            border-radius: 0 26px 26px 0;
+            box-shadow: 10px 5px 5px var(--Pale-blue); 
+
+            // display: grid;
+            // grid-template-columns: 1fr 1fr;
+        }
+        .score-container {
+            display: grid;
+            justify-items: center;
+            text-align: center;
+            background: linear-gradient(
+                var(--Light-slate-blue),
+                var(--Light-royal-blue)
+                );
+            padding-block: 26px;
+            border-radius: 0 0 26px 26px;
+
+            @include lg {
+                padding-inline: 36px;
+                border-radius: 26px;
+            }
+            
+            .score-title, .score-sidetext {
+                color:var(--White);
+            }
+
+            .score-title {
+                margin-block-start: 20px;
+            }
+
+            .score-sidetext {
+                margin-block-end: 12px;
+                font-size: 26px;
+                font-weight: var(--fw-7);
+
+                @include lg {
+                    font-size: 20px;
+                }
+            }
+
+            .score-text {
+                color: var(--Light-lavender);
+                font-weight: var(--fw-5);
+                margin-block-end: 20px;
+                
+                .xl { display: none;}
+
+                @include lg {
+                    .sm {display: none;}
+                    .xl {display: block;}
+                }
+
+            }
+
+            .circle {
+                display: grid;
+                width: 140px;
+                height: 140px;
+                border-radius: 50%;
+                background: linear-gradient(
+                    var(--Violet-blue),
+                    var(--Persian-blue)
+                );
+
+                .score-title {
+                    font-size: 52px;
+                }
+                margin-block-end: 20px;
+            }
+
+            
+        }
+
+        .summary-container {
+            padding-inline: 20px;
+
+
+            .summary-title{
+                font-size: 18px;
+                font-weight: var(--fw-8);
+                margin-block: 20px;
+            }
+
+            .reaction {
+                background-color: hsl(0, 100%, 98%);
+                p {
+                    color: var(--Light-red);
+                }
+            }
+
+            .memory {
+                background-color: hsl(40, 100%, 98%);
+                p {
+                    color: var(--Orangey-yellow);
+                }
+            }
+
+            .verbal {
+                background-color: hsl(169, 100%, 96%);
+                p {
+                    color: var(--Green-teal);
+                }
+            }
+
+            .visual {
+                background-color: hsl(233, 100%, 98%);
+                p {
+                    color: var(--Cobalt-blue);
+                }
+            }
+
+            .summary-box {
+                border-radius: 8px;
+                display: flex;
+                align-items: center;
+                padding-block: 20px;
+                margin-block: 20px;
+
+                @include lg {
+                    padding-block: 13px;
+                    margin-block: 10px;
+                }
+
+                .title {
+                    font-weight: var(--fw-7);
+                }
+                img {
+                    margin-inline: 16px;
+                }
+                .point ,.summary-total {
+                    font-weight: var(--fw-8);
+                }
+
+                .point-box {
+                    display: flex;
+                    align-items: center;
+                    margin-inline-start: auto;
+                    margin-inline-end: 20px;
+                    .point {
+                        color: var(--Dark-gray-blue);
+                        margin-inline-start: 50px;
+                        margin-inline-end: 6px;
+                    }
+    
+                    .summary-total {
+                        color: rgb(167, 166, 166);
+                    }
+                }
+
+                
+            }
+
+            .btn {
+                color: var(--White);
+                font-weight: var(--fw-5);
+                font-size: 20px;
+                text-align: center;
+                background-color: var(--Dark-gray-blue);
+                margin-block-start:20px ;
+                border-radius: 40px;
+                padding-inline: 130px;
+                padding-block: 14px;
+
+                &:hover {
+                    background: linear-gradient(
+                        var(--Light-slate-blue),
+                        var(--Light-royal-blue)
+                    );
+                }
+
+                @include lg {
+                    font-size: 16px;
+                    padding-inline: 93px;
+                    padding-block: 10px;
+                }
+            }
+        }
+
+    }
+
+}
+
+
+
