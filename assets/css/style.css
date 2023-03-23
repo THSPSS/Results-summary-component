@@ -65,7 +65,7 @@
     display: flex;
     justify-content: center;
     border-radius: 0 26px 26px 0;
-    box-shadow: 10px 5px 5px var(--Pale-blue);
+    box-shadow: 0.5rem 1rem 3rem hsla(221, 100%, 96%, 0.5);
   }
 }
 .body .container .score-container {
