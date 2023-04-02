@@ -1,4 +1,4 @@
-fetch("../data.json")
+fetch("https://thspss.github.io/Results-summary-component/data.json")
   .then((response) => response.json())
   .then((data) => {
     data.forEach((element) => {
