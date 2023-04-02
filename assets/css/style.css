@@ -1,7 +1,6 @@
 @font-face {
   font-family: "HankenGrotesk";
-  src: URL("https://github.com/THSPSS/Results-summary-component/blob/master/assets/fonts/HankenGrotesk-VariableFont_wght.ttf")
-    format("truetype");
+  src: URL("ttps://github.com/THSPSS/Results-summary-component/blob/master/assets/fonts/HankenGrotesk-VariableFont_wght.ttf?raw=true") format("truetype");
 }
 /*-------------root-------------*/
 :root {
@@ -21,9 +20,9 @@
   --Light-lavender: hsl(241, 100%, 89%);
   --Dark-gray-blue: hsl(224, 30%, 27%);
   /* font-weight */
-  --fw-5: 500;
-  --fw-7: 700;
-  --fw-8: 800;
+  --fw-5:500;
+  --fw-7:700;
+  --fw-8:800;
 }
 
 /*-------------root end----------*/
@@ -83,17 +82,16 @@
     border-radius: 26px;
   }
 }
-.body .container .score-container .score-title,
-.body .container .score-container .score-sidetext {
+.body .container .score-container .score-title, .body .container .score-container .score-sidetext {
   color: var(--White);
 }
 .body .container .score-container .score-title {
   -webkit-margin-before: 20px;
-  margin-block-start: 20px;
+          margin-block-start: 20px;
 }
 .body .container .score-container .score-sidetext {
   -webkit-margin-after: 12px;
-  margin-block-end: 12px;
+          margin-block-end: 12px;
   font-size: 26px;
   font-weight: var(--fw-7);
 }
@@ -106,7 +104,7 @@
   color: var(--Light-lavender);
   font-weight: var(--fw-5);
   -webkit-margin-after: 20px;
-  margin-block-end: 20px;
+          margin-block-end: 20px;
 }
 .body .container .score-container .score-text .xl {
   display: none;
@@ -126,7 +124,7 @@
   border-radius: 50%;
   background: linear-gradient(var(--Violet-blue), var(--Persian-blue));
   -webkit-margin-after: 20px;
-  margin-block-end: 20px;
+          margin-block-end: 20px;
 }
 .body .container .score-container .circle .score-title {
   font-size: 52px;
@@ -182,24 +180,23 @@
 .body .container .summary-container .summary-box img {
   margin-inline: 16px;
 }
-.body .container .summary-container .summary-box .point,
-.body .container .summary-container .summary-box .summary-total {
+.body .container .summary-container .summary-box .point, .body .container .summary-container .summary-box .summary-total {
   font-weight: var(--fw-8);
 }
 .body .container .summary-container .summary-box .point-box {
   display: flex;
   align-items: center;
   -webkit-margin-start: auto;
-  margin-inline-start: auto;
+          margin-inline-start: auto;
   -webkit-margin-end: 20px;
-  margin-inline-end: 20px;
+          margin-inline-end: 20px;
 }
 .body .container .summary-container .summary-box .point-box .point {
   color: var(--Dark-gray-blue);
   -webkit-margin-start: 50px;
-  margin-inline-start: 50px;
+          margin-inline-start: 50px;
   -webkit-margin-end: 6px;
-  margin-inline-end: 6px;
+          margin-inline-end: 6px;
 }
 .body .container .summary-container .summary-box .point-box .summary-total {
   color: rgb(167, 166, 166);
@@ -211,7 +208,7 @@
   text-align: center;
   background-color: var(--Dark-gray-blue);
   -webkit-margin-before: 20px;
-  margin-block-start: 20px;
+          margin-block-start: 20px;
   border-radius: 40px;
   padding-inline: 130px;
   padding-block: 14px;
@@ -225,4 +222,4 @@
     padding-inline: 93px;
     padding-block: 10px;
   }
-} /*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
